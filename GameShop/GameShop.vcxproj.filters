@@ -13,32 +13,26 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="헤더 파일\Item">
-      <UniqueIdentifier>{ac19fdb4-8349-4013-b24b-a6b3dec0b582}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Shop.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Armor.h">
-      <Filter>헤더 파일\Item</Filter>
+    <ClInclude Include="Item.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="basics.h">
-      <Filter>헤더 파일\Item</Filter>
-    </ClInclude>
-    <ClInclude Include="Item.h">
-      <Filter>헤더 파일\Item</Filter>
-    </ClInclude>
-    <ClInclude Include="Potion.h">
-      <Filter>헤더 파일\Item</Filter>
-    </ClInclude>
-    <ClInclude Include="Weapon.h">
-      <Filter>헤더 파일\Item</Filter>
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Shop.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
