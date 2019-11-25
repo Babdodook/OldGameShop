@@ -4,6 +4,8 @@
 #include<vector>
 #include<memory>
 
+#include"Player.h"
+
 class Shop {
 public:
 	Shop() {}
@@ -13,7 +15,10 @@ public:
 
 	void ShowItemList() const;
 	void ReadDataFromFile();
-	void ShowShopMessage() const;
+	void ShowShopMessage(Player& player) const;
+	void ShowBuyMessage(Player& player) const;
+
+	void BuyItem(Player& player, int index) const;
 private:
 	string m_name;						//	상점 이름
 	vector<shared_ptr<Item>> m_items;	//	보유 아이템 목록

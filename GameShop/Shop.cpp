@@ -34,10 +34,12 @@ Shop::~Shop()
 
 void Shop::ShowItemList() const
 {
-	cout << "Welcome to  " << m_name << "!" << endl;
+	int itemIdx = 0;
+
 	cout << " - Item List - " << endl;
 	for (auto& item : m_items)
 	{
+		cout << "No. " << (itemIdx++) + 1 << endl;
 		item->Describe();
 	}
 }
@@ -101,7 +103,7 @@ void Shop::ReadDataFromFile()
 	}
 }
 
-void Shop::ShowShopMessage() const
+void Shop::ShowShopMessage(Player& player) const
 {
 	int inputIndex = 0;
 
@@ -110,6 +112,7 @@ void Shop::ShowShopMessage() const
 		cout << "Welcome to " << m_name << "!" << endl;
 		cout << "-----------------------------" << endl;
 		cout << "1. Show Item List" << endl;
+		cout << "2. Buy Item" << endl;
 		cout << "2. Exit" << endl;
 		cout << endl;
 
@@ -121,11 +124,23 @@ void Shop::ShowShopMessage() const
 			ShowItemList();
 			break;
 		case 2:
-			return;
+			ShowBuyMessage(player);
 			break;
 		default:
 			cout << "Error: Invalid number, please input again." << endl;
 			break;
 		}
 	}
+}
+
+void Shop::ShowBuyMessage(Player& player) const
+{
+	int index = 0;
+	cout << "Which item to buy? (1 ~ 5, 0: Exit) ";
+	cin >> index;
+}
+
+void Shop::BuyItem(Player& player, int index) const
+{
+	m_items[index]
 }

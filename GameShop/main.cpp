@@ -1,9 +1,11 @@
 #include"Shop.h"
+#include"Player.h"
 
 int main()
 {
-	Shop *weaponArmorShop = new Shop("Weapon/Armor Shop", "equip_item.txt");
-	Shop *potionShop = new Shop("Potion Shop", "potion_item.txt");
+	Shop weaponArmorShop = Shop("Weapon/Armor Shop", "equip_item.txt");
+	Shop potionShop = Shop("Potion Shop", "potion_item.txt");
+	Player player = Player();
 
 	int inputIndex = 0;
 	while (true)
@@ -20,11 +22,11 @@ int main()
 		switch (inputIndex) {
 		case 1:
 			system("cls");
-			weaponArmorShop->ShowItemList();
+			weaponArmorShop.ShowShopMessage();
 			break;
 		case 2:
 			system("cls");
-			potionShop->ShowItemList();
+			potionShop.ShowItemList();
 			break;
 		case 3:
 			exit(0);
